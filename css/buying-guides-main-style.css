@@ -1,0 +1,277 @@
+@font-face {
+    font-family: "Zalando_Sans";
+    src: url(fonts/ZalandoSans-VariableFont_wdth\,wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(fonts/Orbitron-VariableFont_wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ZenTokyoZoo";
+    src:url(fonts/ZenTokyoZoo-Regular.ttf);
+}
+
+body {
+    position: relative;
+    background-color: black;
+    font-family: Zalando_Sans;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    margin: 0;
+    align-items: top;
+    border-bottom: 1px solid gray;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+    margin-bottom: 40px;
+}
+
+.navbar ul li {
+    float: left;
+    margin-right: 100px;
+    list-style-type: none;
+}
+
+.navbar li div {
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+.navbar li div a {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888888;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 15px 5px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    left: 50%;
+    top: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::before {
+    width: 80%;
+    left: 10%;
+}
+
+.dropdown:hover .dropbtn {
+    color: lightgray;
+}
+
+.dropdown-content a:hover {
+    color: aqua;
+}
+
+.dropbtn a:hover {
+    color: lightgray;
+}
+
+.main-container {
+    width: 70vw;
+    margin: 0 auto;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 200px;
+}
+
+.main-container a {
+    display: block;
+    width: 100%;
+    height: 500px;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+    transition: 0.2s;
+    margin-bottom: 30%;
+}
+
+.section.smartphones::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/smartphones-thumbnail.webp);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.5;
+    border-radius: 15px;
+}
+
+.section.tablets::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/tablets-thumbnail.avif);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.5;
+    border-radius: 15px;
+}
+
+.section.laptops::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/laptops-thumnail.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.5;
+    border-radius: 15px;
+}
+
+.section:hover {
+    transform: scale(1.05);
+}
+
+.section-content {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.section h2 {
+    font-size: 45px;
+}
+
+.section p {
+    font-size: 20px;
+}
+
+p.disclaimer {
+    position: absolute;
+    bottom: 130px;
+    right: 0;
+    font-size: 18px;
+    margin: 0;
+    padding: 15px;
+    color: gray;
+}
+
+footer {
+    background-color: black;
+    width: 100vw;
+    height: 130px;
+    border-top: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+footer .logo {
+    display: block;
+    margin: 0 5%;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+footer h1 {
+    color: #00b3b3;
+    font-family: Orbitron;
+    font-size: 40px;
+    margin-right: 5%;
+}
+
+footer .navlink-bar {
+    display: flex;
+    width: 20%;
+}
+
+footer .navlink {
+    border: solid 1px gray;
+    border-radius: 8px;
+    padding: 3%;
+    margin-right: 8%;
+}
+
+footer .navlink a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: #00b3b3;
+}
+
+.sm-icons {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm-icons a {
+    color: white;
+    font-size: 35px;
+}

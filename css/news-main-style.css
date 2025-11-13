@@ -1,0 +1,389 @@
+@font-face {
+    font-family: "Zalando_Sans";
+    src: url(fonts/ZalandoSans-VariableFont_wdth\,wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(fonts/Orbitron-VariableFont_wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ZenTokyoZoo";
+    src:url(fonts/ZenTokyoZoo-Regular.ttf);
+}
+
+body {
+    background-color: black;
+    font-family: Zalando_Sans;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    margin: 0;
+    align-items: top;
+    margin-bottom: 30px;
+    border-bottom: 1px solid gray;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+}
+
+.navbar ul li {
+    float: left;
+    margin-right: 100px;
+    list-style-type: none;
+}
+
+.navbar li div {
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+.navbar li div a {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888888;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 15px 5px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    left: 50%;
+    top: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::before {
+    width: 80%;
+    left: 10%;
+}
+
+.dropdown:hover .dropbtn {
+    color: lightgray;
+}
+
+.dropdown-content a:hover {
+    color: aqua;
+}
+
+.dropbtn a:hover {
+    color: lightgray;
+}
+
+.main-container {
+    width: 85vw;
+    margin: 0 auto;
+    margin-bottom: 30vh;
+    align-items: top;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    padding-right: 3%;
+    padding-left: 0;
+    font-size: 45px;
+    border-right: 1px solid gray
+}
+
+.header p {
+    margin: 0;
+    padding: 1% 3%;
+    font-size: 20px;
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+    width: 65%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.tags h2 {
+    font-weight: normal;
+    margin-right: 5%;
+}
+
+.tags button {
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: black;
+    border-color: gray;
+    color: white;
+}
+
+.tags button:hover {
+    color: aqua;
+    background-color: #313657;
+}
+
+hr {
+    background-color: gray;
+    margin-bottom: 50px;
+}
+
+.headlines-section {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    border-bottom: 1px solid gray;
+}
+
+.item-large {
+    width: 50%;
+    height: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.item-large a {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.item-large a:hover {
+    text-decoration: underline 1.5px aqua;
+}
+
+.item-large p {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.item-large .news-header {
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.name {
+    color: #3d90d7;
+}
+
+.item-large .image-container {
+    width: 100%;
+    height: 65%;
+}
+
+.item-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.item-small-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 47%;
+    height: 80%;
+    padding: 0;
+    gap: 5%;
+}
+
+.item {
+    width: 270px;
+    height: 100%;
+}
+
+.item a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-weight: bold;
+}
+
+.item a:hover {
+    text-decoration: underline 1.5px aqua;
+}
+
+.item p {
+    margin: 5px 0;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.item .image-container {
+    width: 100%;
+    height: 180px;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.item .news-header {
+    margin-top: 0;
+    font-size: 15px;
+    color: white;
+}
+
+.section-container {
+    width: 100%;
+}
+
+.section:not(.last){
+    padding-bottom: 70px;
+    border-bottom: 1px solid gray;
+}
+
+.section-container .header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.section .header h2 {
+    font-weight: normal;
+    margin: 0;
+    font-size: 30px;
+}
+
+.section .header button {
+    width: 100px;
+    padding: 5%;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    border-color: gray;
+}
+
+.section .header button:hover {
+    filter: brightness(0.6)
+}
+
+.section .item-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: black;
+    width: 100vw;
+    height: 20vh;
+    border-top: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+footer .logo {
+    display: block;
+    margin: 0 5%;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+footer h1 {
+    color: #00b3b3;
+    font-family: Orbitron;
+    font-size: 40px;
+    margin-right: 5%;
+}
+
+footer .navlink-bar {
+    display: flex;
+    width: 20%;
+}
+
+footer .navlink {
+    border: solid 1px gray;
+    border-radius: 8px;
+    padding: 3%;
+    margin-right: 8%;
+}
+
+footer .navlink a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: #00b3b3;
+}
+
+.sm-icons {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm-icons a {
+    color: white;
+    font-size: 35px;
+}

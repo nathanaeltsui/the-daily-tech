@@ -1,0 +1,317 @@
+@font-face {
+    font-family: "Zalando_Sans";
+    src: url(fonts/ZalandoSans-VariableFont_wdth\,wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(fonts/Orbitron-VariableFont_wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ZenTokyoZoo";
+    src:url(fonts/ZenTokyoZoo-Regular.ttf);
+}
+
+body {
+    background-color: black;
+    font-family: Zalando_Sans;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    margin: 0;
+    align-items: top;
+    border-bottom: 1px solid gray;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+    margin-bottom: 40px;
+}
+
+.navbar ul li {
+    float: left;
+    margin-right: 100px;
+    list-style-type: none;
+}
+
+.navbar li div {
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+.navbar li div a {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888888;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 15px 5px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    left: 50%;
+    top: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::before {
+    width: 80%;
+    left: 10%;
+}
+
+.dropdown:hover .dropbtn {
+    color: lightgray;
+}
+
+.dropdown-content a:hover {
+    color: aqua;
+}
+
+.dropbtn a:hover {
+    color: lightgray;
+}
+
+.main-container {
+    width: 85vw;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20vh;
+}
+
+.review-section-container {
+    display: flex;
+    width: 100%;
+    height: 220px;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    border-bottom: 1px solid gray;
+}
+
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.card {
+    width: 22%;
+    height: 300px;
+    background-color: lightgray;
+    border-radius: 8px;
+}
+
+.card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+.card-body {
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-footer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 25%;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.review-section-container .section {
+    display: flex;
+    width: 400px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.review-section-container .section:hover{
+    transform: scale(1.1)
+}
+
+.review-section-container a {
+    text-decoration: none;
+}
+
+.review-section-container .section h1 {
+    font-size: 40px;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+}
+
+.review-section-container .section.smartphone {
+    background: linear-gradient(rgba(0, 0, 0, 0.6)), url(../images/smartphones-thumbnail.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.review-section-container .section.laptop {
+    background: linear-gradient(rgba(0, 0, 0, 0.6)), url(../images/laptops-thumnail.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.review-section-container .section.tablet {
+    background: linear-gradient(rgba(0, 0, 0, 0.6)), url(../images/tablets-thumbnail.avif);
+    background-size: cover;
+    background-position: center;
+}
+
+.section-container {
+    width: 100%;
+}
+
+.section-container .section:not(.last){
+    padding-bottom: 70px;
+    border-bottom: 1px solid gray;
+}
+
+.section-container .header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.section-container .section .header h2 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.section-container .section .header button {
+    width: 100px;
+    padding: 5%;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    border-color: gray;
+}
+
+.section .header button:hover {
+    filter: brightness(0.6)
+}
+
+footer {
+    background-color: black;
+    width: 100vw;
+    height: 20vh;
+    border-top: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+footer .logo {
+    display: block;
+    margin: 0 5%;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+footer h1 {
+    color: #00b3b3;
+    font-family: Orbitron;
+    font-size: 40px;
+    margin-right: 5%;
+}
+
+footer .navlink-bar {
+    display: flex;
+    width: 20%;
+}
+
+footer .navlink {
+    border: solid 1px gray;
+    border-radius: 8px;
+    padding: 3%;
+    margin-right: 8%;
+}
+
+footer .navlink a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: #00b3b3;
+}
+
+.sm-icons {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm-icons a {
+    color: white;
+    font-size: 35px;
+}

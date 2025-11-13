@@ -1,0 +1,239 @@
+@font-face {
+    font-family: "Zalando_Sans";
+    src: url(fonts/ZalandoSans-VariableFont_wdth\,wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(fonts/Orbitron-VariableFont_wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ZenTokyoZoo";
+    src:url(fonts/ZenTokyoZoo-Regular.ttf);
+}
+
+body {
+    font-family: Zalando_Sans;
+    color: white;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.3)), url(../images/about\ page\ background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navbar {
+    display: flex;
+    margin: 0;
+    align-items: top;
+    border-bottom: 1px solid gray;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+}
+
+.navbar ul li {
+    float: left;
+    margin-right: 100px;
+    list-style-type: none;
+}
+
+.navbar li div {
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+.navbar li div a {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888888;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 15px 5px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    left: 50%;
+    top: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::before {
+    width: 80%;
+    left: 10%;
+}
+
+.dropdown:hover .dropbtn {
+    color: lightgray;
+}
+
+.dropdown-content a:hover {
+    color: aqua;
+}
+
+.dropbtn a:hover {
+    color: lightgray;
+}
+
+.main-container {
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.section {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: calc(100vh - 100px);
+    justify-content: flex-start;
+    scroll-snap-align: start;
+}
+
+.section.last {
+    height: calc(100vh - 230px);
+}
+
+.section-content {
+    width: 60%;
+    padding: 30px;
+    padding-left: 70px;
+    margin-left: 50px;
+    border-radius: 10px;
+}
+
+.section-content h1 {
+    font-size: 70px;
+    margin-bottom: 50px;
+}
+
+.section-content h1.line-1 {
+    margin: 0;
+}
+
+.section-content h1.line-2 {
+    margin-left: 15%;
+    margin-top: 0;
+}
+
+.section-content span {
+    color: aqua;
+}
+
+.section-content p {
+    font-size: 25px;
+}
+
+p.disclaimer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 18px;
+    margin: 0;
+    padding: 15px;
+    color: gray;
+}
+
+footer {
+    background-color: black;
+    width: 100vw;
+    height: 130px;
+    border-top: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+footer .logo {
+    display: block;
+    margin: 0 5%;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+footer h1 {
+    color: #00b3b3;
+    font-family: Orbitron;
+    font-size: 40px;
+    margin-right: 5%;
+}
+
+footer .navlink-bar {
+    display: flex;
+    width: 20%;
+}
+
+footer .navlink {
+    border: solid 1px gray;
+    border-radius: 8px;
+    padding: 3%;
+    margin-right: 8%;
+}
+
+footer .navlink a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+footer .navlink:hover {
+    color: aqua;
+    border-color: aqua;
+}
+
+.sm-icons {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm-icons a {
+    color: white;
+    font-size: 35px;
+}

@@ -1,0 +1,319 @@
+@font-face {
+    font-family: "Zalando_Sans";
+    src: url(fonts/ZalandoSans-VariableFont_wdth\,wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(fonts/Orbitron-VariableFont_wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ZenTokyoZoo";
+    src:url(fonts/ZenTokyoZoo-Regular.ttf);
+}
+
+body {
+    background-color: black;
+    font-family: Zalando_Sans;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    margin: 0;
+    align-items: top;
+    border-bottom: 1px solid gray;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+}
+
+.navbar ul li {
+    float: left;
+    margin-right: 100px;
+    list-style-type: none;
+}
+
+.navbar li div {
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+.navbar li div a {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888888;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 15px 5px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    left: 50%;
+    top: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::before {
+    width: 80%;
+    left: 10%;
+}
+
+.dropdown:hover .dropbtn {
+    color: lightgray;
+}
+
+.dropdown-content a:hover {
+    color: aqua;
+}
+
+.dropbtn a:hover {
+    color: lightgray;
+}
+
+.main-container {
+    width: 70vw;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    padding-left: 15vw;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin: 0;
+    padding-right: 3%;
+    padding-left: 0;
+    font-size: 50px;
+    border-right: 1px solid gray
+}
+
+.header p {
+    margin: 0;
+    padding: 1% 3%;
+    font-size: 20px;
+}
+
+.section.news {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
+
+.item {
+    width: 320px;
+    height: 100%;
+}
+
+.item a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-weight: bold;
+}
+
+.item a:hover {
+    text-decoration: underline 1.5px aqua;
+}
+
+.item p {
+    margin: 5px 0;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.item .image-container {
+    width: 100%;
+    height: 200px;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.item .news-header {
+    margin-top: 0;
+    font-size: 16px;
+    color: white;
+}
+
+.name {
+    color: #3d90d7;
+}
+
+.section.catalogue {
+    width: 100%;
+    height: 380px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 80px;
+    background-color: rgb(72, 72, 72);
+    border-radius: 10px;
+}
+
+.card {
+    width: 22%;
+    height: 300px;
+    background-color: lightgray;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05)
+}
+
+.card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+.card-body {
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-footer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 25%;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+
+footer {
+    background-color: black;
+    width: 100vw;
+    height: 20vh;
+    border-top: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+footer .logo {
+    display: block;
+    margin: 0 5%;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+footer h1 {
+    color: #00b3b3;
+    font-family: Orbitron;
+    font-size: 40px;
+    margin-right: 5%;
+}
+
+footer .navlink-bar {
+    display: flex;
+    width: 20%;
+}
+
+footer .navlink {
+    border: solid 1px gray;
+    border-radius: 8px;
+    padding: 3%;
+    margin-right: 8%;
+}
+
+footer .navlink a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+footer .navlink:hover {
+    color: aqua;
+    border-color: aqua;
+}
+
+.sm-icons {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm-icons a {
+    color: white;
+    font-size: 35px;
+}

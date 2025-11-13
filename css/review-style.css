@@ -1,0 +1,282 @@
+@font-face {
+    font-family: "Zalando_Sans";
+    src: url(fonts/ZalandoSans-VariableFont_wdth\,wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(fonts/Orbitron-VariableFont_wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ZenTokyoZoo";
+    src:url(fonts/ZenTokyoZoo-Regular.ttf);
+}
+
+body {
+    background-color: #f4f9ff;
+    font-family: Zalando_Sans;
+    color: black;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    margin: 0;
+    align-items: top;
+    background-color: black;
+    margin-bottom: 0;
+}
+
+.navbar ul li {
+    float: left;
+    margin-right: 100px;
+    list-style-type: none;
+}
+
+.navbar li div {
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+.navbar li div a {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888888;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 15px 5px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    left: 50%;
+    top: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::before {
+    width: 80%;
+    left: 10%;
+}
+
+.dropdown:hover .dropbtn {
+    color: lightgray;
+}
+
+.dropdown-content a:hover {
+    color: aqua;
+}
+
+.dropbtn a:hover {
+    color: lightgray;
+}
+
+.header {
+    display: flex;
+    width: 100vw;
+    height: 800px;
+    vertical-align: top;
+    justify-content: space-between;
+}
+
+hr {
+    width: 100%;
+    text-align: center;
+}
+
+.header-text {
+    margin-top: 150px;
+    margin-right: 100px;
+    align-items: center;
+    width: 40%;
+    height: 25%;
+    text-align: start;
+}
+
+.header-text h1 {
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+
+.header-text h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.header-text p {
+    font-size: 20px;
+}
+
+.image-container {
+    height: 90%;
+    width: 50%;
+    margin-right: 40px;
+}
+
+.header img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.main-container {
+    width: 100vw;
+    display: block;
+    background-color: #f4f9ff;
+    margin-top: 0;
+    margin-bottom: 70px;
+}
+
+.main-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.box {
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 65%;
+    height: 250px;
+    background-color: #d5ebff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.item-container {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.item-container.battery {
+    width: 80%;
+}
+
+.item {
+    text-align: center;
+}
+
+.box h2 {
+    margin: 0;
+    padding: 20px;
+}
+
+.box p {
+    margin: 0;
+    padding: 10px;
+}
+
+.sources {
+    border-top: 1px solid gray;
+    margin-left: 30px;
+    width: 58%;
+    margin-bottom: 20px;
+}
+
+.sources a {
+    text-decoration: none;
+    color: darkslategray;
+}
+
+footer {
+    background-color: black;
+    width: 100vw;
+    height: 20vh;
+    border-top: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+footer .logo {
+    display: block;
+    margin: 0 5%;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+footer h1 {
+    color: #00b3b3;
+    font-family: Orbitron;
+    font-size: 40px;
+    margin-right: 5%;
+}
+
+footer .navlink-bar {
+    display: flex;
+    width: 20%;
+}
+
+footer .navlink {
+    border: solid 1px gray;
+    border-radius: 8px;
+    padding: 3%;
+    margin-right: 8%;
+}
+
+footer .navlink a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: #00b3b3;
+}
+
+.sm-icons {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm-icons a {
+    color: white;
+    font-size: 35px;
+}

@@ -1,0 +1,580 @@
+@font-face {
+    font-family: "Zalando_Sans";
+    src: url(fonts/ZalandoSans-VariableFont_wdth\,wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(fonts/Orbitron-VariableFont_wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ZenTokyoZoo";
+    src:url(fonts/ZenTokyoZoo-Regular.ttf);
+}
+
+body {
+    background-color: black;
+    font-family: Zalando_Sans;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    margin: 0;
+    align-items: top;
+    margin-bottom: 8vh;
+    border-bottom: 1px solid gray;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+}
+
+.navbar ul li {
+    float: left;
+    margin-right: 100px;
+    list-style-type: none;
+}
+
+.navbar li div {
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+.navbar li div a {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888888;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 15px 5px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    left: 50%;
+    top: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::before {
+    width: 80%;
+    left: 10%;
+}
+
+.dropdown:hover .dropbtn {
+    color: lightgray;
+}
+
+.dropdown-content a:hover {
+    color: aqua;
+}
+
+.dropbtn a:hover {
+    color: lightgray;
+}
+
+.main-container {
+    width: 85vw;
+    height: 80vh;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+    align-items: top;
+}
+
+.trending {
+    width: 50%;
+    height: 75%;
+    margin-right: 0 auto;
+    padding: 0;
+}
+
+.trending h1 {
+    margin-top: 0;
+    margin-bottom: 5%;
+    font-family: "ZenTokyoZoo";
+    font-size: 60px;
+    font-weight: lighter;
+}
+
+.slider-container {
+    position: relative;
+    width: 650px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.slider {
+    position: relative;
+    width: 600%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    animation: 30s ease-in-out sliding infinite;
+}
+
+.image-box a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.image-box {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.image-box .headlines {
+    position: absolute;
+    width: 650px;
+    height: 20%;
+    left: 0;
+    bottom: 0;
+    color: white;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    font-weight: bold;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.image-box .headlines:hover {
+    text-decoration: underline solid 2px aqua;
+}
+
+@keyframes sliding {
+    0% {
+        transform: translateX(0%);
+    }
+    15% {
+        transform: translateX(0%);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    35% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(-200%);
+    }
+    55% {
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(-300%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    80% {
+        transform: translateX(-400%);
+    }
+    95% {
+        transform: translateX(-400%);
+    }
+    100% {
+        transform: translateX(-500%);
+    }
+}
+
+.top-stories {
+    width: 40%;
+    height: 100%;
+    margin-left: auto;
+    display: block;
+    padding: 0;
+}
+
+.top-stories h2{
+    margin-left: 10%;
+    color: aqua;
+    font-size: 20px;
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+
+.news-header {
+    margin-top: 3%;
+    font-size: 15px;
+    color: white;
+}
+
+.name {
+    color: #3d90d7;
+}
+
+.story {
+    display: flex;
+    width: 100%;
+    height: 16%;
+    align-items: top;
+    justify-content: center;
+    font-size: 18px;
+    border-bottom: solid 1px gray;
+    margin-top: 3%;
+    padding-bottom: 8%;
+}
+
+.story.last {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.story-body {
+    padding: 0;
+    width: 60%;
+}
+
+.story a {
+    width: 60%;
+    margin-left: auto;
+    text-decoration: none;
+    color: white;
+    padding-top: 0;
+}
+
+.story a:hover {
+    text-decoration: underline solid 1.5px aqua;
+}
+
+.story .image-container {
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+    margin-left: 3%;
+}
+
+.story img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 3%;
+}
+
+.number-icon {
+    width: 25px;
+    height: 25px;
+    background: #435663;
+    color: aqua;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-right: 3%;
+}
+
+.box-container {
+    width: 85vw;
+    height: 30vh;
+    margin: 0 auto;
+    margin-bottom: 3vh;
+    padding-bottom: 30vh;
+    border-bottom: 1px solid gray;
+}
+
+.box-container button {
+    font-family: "ZenTokyoZoo";
+    margin-bottom: 20px;
+    color: white;
+    font-size: 40px;
+    background-color: black;
+    border: none;
+}
+
+.box-container button:hover {
+    color: aqua;
+}
+
+.box {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: space-between;
+}
+
+.item {
+    width: 23%;
+    height: 100%;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.box-container .image-container {
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+}
+
+.box-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 3%;
+}
+
+.box-container a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.box-container a p:hover {
+    text-decoration: underline solid 1.5px aqua;
+}
+
+.box-container a p {
+    display: inline-block;
+    margin-top: 5%;
+    margin-bottom: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.box-container.last {
+    border-bottom: none;
+}
+
+.box-container.last a:not(.box-link){
+    display: block;
+    width: 30%;
+    height: 250px;
+}
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    position: relative;
+    border-radius: 10px;
+    transition: 0.2s;
+    margin-bottom: 30%;
+}
+
+.section.smartphones::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/smartphones-thumbnail.webp);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.5;
+    border-radius: 15px;
+}
+
+.section.tablets::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/tablets-thumbnail.avif);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.5;
+    border-radius: 15px;
+}
+
+.section.laptops::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/laptops-thumnail.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.5;
+    border-radius: 15px;
+}
+
+.section:hover {
+    transform: scale(1.05);
+}
+
+.section h2 {
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.card {
+    width: 22%;
+    height: 300px;
+    background-color: lightgray;
+    border-radius: 8px;
+}
+
+.card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+.card-body {
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-footer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 25%;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+footer {
+    background-color: black;
+    width: 100vw;
+    height: 130px;
+    border-top: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+footer .logo {
+    display: block;
+    margin: 0 5%;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+footer h1 {
+    color: #00b3b3;
+    font-family: Orbitron;
+    font-size: 40px;
+    margin-right: 5%;
+}
+
+footer .navlink-bar {
+    display: flex;
+    width: 20%;
+}
+
+footer .navlink {
+    border: solid 1px gray;
+    border-radius: 8px;
+    padding: 3%;
+    margin-right: 8%;
+}
+
+footer .navlink a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: #00b3b3;
+}
+
+.sm-icons {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm-icons a {
+    color: white;
+    font-size: 35px;
+}

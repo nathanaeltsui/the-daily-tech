@@ -1,0 +1,275 @@
+@font-face {
+    font-family: "Zalando_Sans";
+    src: url(fonts/ZalandoSans-VariableFont_wdth\,wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(fonts/Orbitron-VariableFont_wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ZenTokyoZoo";
+    src:url(fonts/ZenTokyoZoo-Regular.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, html{
+    background-color: black;
+    font-family: "Zalando_Sans";
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    height: 100px;
+    margin: 0;
+    align-items: top;
+    border-bottom: 1px solid gray;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: black;
+}
+
+.navbar ul li {
+    float: left;
+    margin-right: 100px;
+    list-style-type: none;
+}
+
+.navbar li div {
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+.navbar li div a {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888888;
+    z-index: 1100;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 15px 5px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    left: 50%;
+    top: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::before {
+    width: 80%;
+    left: 10%;
+}
+
+.dropdown:hover .dropbtn {
+    color: lightgray;
+}
+
+.dropdown-content a:hover {
+    color: aqua;
+}
+
+.dropbtn a:hover {
+    color: lightgray;
+}
+
+.main-container {
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 0;
+}
+
+.section {
+    position: relative;
+    scroll-snap-align: start;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+}
+
+.section.last {
+    height: calc(100vh - 230px);
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.section-content {
+    box-sizing: border-box;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.section-content.one img {
+    width: 30%;
+    margin-bottom: 40px;
+}
+
+.section-content.two img {
+    width: 25%;
+}
+
+.section-content.three img {
+    width: 25%;
+    margin: 30px 0;
+}
+
+.section-content.four img {
+    width: 18%;
+    margin-top: 20px;
+}
+
+.section-content.four {
+    height: 400px;
+}
+
+.section-content h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.section-content p {
+    width: 50%;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.section-content a {
+    text-decoration: none;
+}
+
+.section-content button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: aqua;
+    color: black;
+    border-radius: 10px;
+    font-weight: bolder;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.section-content button:hover {
+    filter: brightness(0.6);
+}
+
+footer {
+    background-color: black;
+    width: 100vw;
+    height: 130px;
+    border-top: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+footer .logo {
+    display: block;
+    margin: 0 5%;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+footer h1 {
+    color: #00b3b3;
+    font-family: Orbitron;
+    font-size: 40px;
+    margin-right: 5%;
+}
+
+footer .navlink-bar {
+    display: flex;
+    width: 20%;
+}
+
+footer .navlink {
+    border: solid 1px gray;
+    border-radius: 8px;
+    padding: 3%;
+    margin-right: 8%;
+}
+
+footer .navlink a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+footer .navlink:hover {
+    border-color: aqua;
+}
+
+.sm-icons {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm-icons a {
+    color: white;
+    font-size: 35px;
+}

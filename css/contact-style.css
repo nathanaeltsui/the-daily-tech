@@ -1,0 +1,275 @@
+@font-face {
+    font-family: "Zalando_Sans";
+    src: url(fonts/ZalandoSans-VariableFont_wdth\,wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(fonts/Orbitron-VariableFont_wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ZenTokyoZoo";
+    src:url(fonts/ZenTokyoZoo-Regular.ttf);
+}
+
+body {
+    font-family: Zalando_Sans;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    margin: 0;
+    align-items: top;
+    border-bottom: 1px solid gray;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+}
+
+.navbar ul li {
+    float: left;
+    margin-right: 100px;
+    list-style-type: none;
+}
+
+.navbar li div {
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+.navbar li div a {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888888;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 15px 5px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    left: 50%;
+    top: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::before {
+    width: 80%;
+    left: 10%;
+}
+
+.dropdown:hover .dropbtn {
+    color: lightgray;
+}
+
+.dropdown-content a:hover {
+    color: aqua;
+}
+
+.dropbtn a:hover {
+    color: lightgray;
+}
+
+.main-container {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+    margin: 0 auto;
+}
+
+.header {
+    width: 30%;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.header p {
+    font-size: 20px;
+}
+
+.form-container{
+    background-color: rgb(234, 234, 234);
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 3px lightgray;
+    padding: 50px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    margin: 100px 0;
+    width: 55%;
+}
+
+form {
+    display: block;
+    margin-left: 20px;
+}
+
+label:not(.email-group label, .checkbox-group label){
+    display: block;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.checkbox-group {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    color: darkslategray;
+}
+
+.radio-group {
+    display: flex;
+    font-size: 18px;
+    color: darkslategray;
+}
+
+.email-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+input[type=email] {
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-left: 20px;
+    font-size: 18px;
+    color: darkslategray;
+}
+
+input[type=radio] {
+    margin-bottom: 70px;
+}
+
+input[type=submit] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    margin-left: 30px;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: black;
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 16px;
+    color: darkslategray;
+    margin-bottom: 40px;
+}
+
+footer {
+    background-color: black;
+    width: 100vw;
+    height: 130px;
+    border-top: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+footer .logo {
+    display: block;
+    margin: 0 5%;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+footer h1 {
+    color: #00b3b3;
+    font-family: Orbitron;
+    font-size: 40px;
+    margin-right: 5%;
+}
+
+footer .navlink-bar {
+    display: flex;
+    width: 20%;
+}
+
+footer .navlink {
+    border: solid 1px gray;
+    border-radius: 8px;
+    padding: 3%;
+    margin-right: 8%;
+}
+
+footer .navlink a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+footer .navlink:hover {
+    color: aqua;
+    border-color: aqua;
+}
+
+.sm-icons {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm-icons a {
+    color: white;
+    font-size: 35px;
+}

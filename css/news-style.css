@@ -1,0 +1,281 @@
+@font-face {
+    font-family: "Zalando_Sans";
+    src: url(fonts/ZalandoSans-VariableFont_wdth\,wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(fonts/Orbitron-VariableFont_wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Newsreader";
+    src: url(fonts/Newsreader-VariableFont_opsz\,wght.ttf);
+    font-weight: normal;
+}
+
+body {
+    background-color: black;
+    font-family: Zalando_Sans;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    margin: 0;
+    align-items: top;
+    margin-bottom: 8vh;
+    border-bottom: 1px solid gray;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+}
+
+.navbar ul li {
+    float: left;
+    margin-right: 100px;
+    list-style-type: none;
+}
+
+.navbar li div {
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+.navbar li div a {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888888;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 15px 5px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    left: 50%;
+    top: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::before {
+    width: 80%;
+    left: 10%;
+}
+
+.dropdown:hover .dropbtn {
+    color: lightgray;
+}
+
+.dropdown-content a:hover {
+    color: aqua;
+}
+
+.dropbtn a:hover {
+    color: lightgray;
+}
+
+.tags {
+    display: inline-block;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.tags button {
+    float: left;
+    width: 20%;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 8px;
+    margin-right: 5%;
+    border-color: gray;
+    border-radius: 5px;
+}
+
+.tags button:hover {
+    background-color: #313657;
+    color: aqua;
+}
+
+.container {
+    width: 55vw;
+    margin-left: 10vw;
+}
+
+.article {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 90px;
+}
+
+.container h1 {
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.image-container {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 2%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.container img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+}
+
+.credits {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.credits li{
+    padding: 0;
+    margin: 0;
+    margin-right: 5%;
+    font-size: 18px;
+    list-style-type: none;
+}
+
+.credits li:not(.date) {
+    color: aqua;
+}
+
+.article p {
+    font-size: 20px;
+    line-height: 200%;
+}
+
+.sources {
+    border-top: 1px solid gray;
+    display: block;
+    margin-bottom: 50px;
+    font-size: 16px;
+    width: 800px;
+    margin-left: 50px;
+}
+
+.sources li {
+    list-style-type: none;
+}
+
+.sources a {
+    text-decoration: none;
+    display: block;
+    color: gray;
+}
+
+.sources a:hover {
+    color: lightgray;
+    text-decoration: underline 1px aqua;
+}
+
+footer {
+    background-color: black;
+    width: 100vw;
+    height: 130px;
+    border-top: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+footer .logo {
+    display: block;
+    margin: 0 5%;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+footer h1 {
+    color: #00b3b3;
+    font-family: Orbitron;
+    font-size: 40px;
+    margin-right: 5%;
+}
+
+footer .navlink-bar {
+    display: flex;
+    width: 20%;
+}
+
+footer .navlink {
+    border: solid 1px gray;
+    border-radius: 8px;
+    padding: 3%;
+    margin-right: 8%;
+}
+
+footer .navlink a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: #00b3b3;
+}
+
+.sm-icons {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm-icons a {
+    color: white;
+    font-size: 35px;
+}

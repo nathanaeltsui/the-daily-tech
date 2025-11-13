@@ -1,0 +1,314 @@
+@font-face {
+    font-family: "Zalando_Sans";
+    src: url(fonts/ZalandoSans-VariableFont_wdth\,wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(fonts/Orbitron-VariableFont_wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ZenTokyoZoo";
+    src:url(fonts/ZenTokyoZoo-Regular.ttf);
+}
+
+body {
+    background-color: black;
+    font-family: Zalando_Sans;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    margin: 0;
+    align-items: top;
+    border-bottom: 1px solid gray;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+    margin-bottom: 40px;
+}
+
+.navbar ul li {
+    float: left;
+    margin-right: 100px;
+    list-style-type: none;
+}
+
+.navbar li div {
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+.navbar li div a {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888888;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 15px 5px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    left: 50%;
+    top: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::before {
+    width: 80%;
+    left: 10%;
+}
+
+.dropdown:hover .dropbtn {
+    color: lightgray;
+}
+
+.dropdown-content a:hover {
+    color: aqua;
+}
+
+.dropbtn a:hover {
+    color: lightgray;
+}
+
+.main-container {
+    width: 50vw;
+    margin-left: 10vw;
+    margin-bottom: 100px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 30px;
+    font-family: "ZenTokyoZoo";
+    font-weight: light;
+}
+
+.section {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 70px;
+}
+
+.section-header {
+    text-align: center;
+    padding: 10px;
+    background-color: aliceblue;
+    color: black;
+    margin: 0;
+}
+
+.section-header h2 {
+    padding: 10px;
+    margin: 0;
+}
+
+.section-header p {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+.image-container {
+    width: 100%;
+    height: 400px;
+    background-color: white;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.purchase-info {
+    background-color: aliceblue;
+    color: black;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.purchase-info a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.purchase-info img {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.section-body {
+    width: 100%;
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.pros {
+    width: 50%;
+    border-right: 1px solid gray;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.pros i {
+    color: lightgreen;
+}
+
+.cons {
+    width: 50%;
+    box-sizing: border-box;
+    margin-left: 70px;
+}
+
+.cons i {
+    color: red;
+}
+
+.section a {
+    text-decoration: none;
+}
+
+.section button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    border-color: white;
+    border-radius: 5px;
+}
+
+.section button:hover {
+    filter: brightness(0.7)
+}
+
+.sources {
+    border-top: 1px solid gray;
+    margin-left: 30px;
+    width: 58%;
+    margin-bottom: 20px;
+}
+
+.sources a {
+    display: block;
+    text-decoration: none;
+    color: gray;
+}
+
+footer {
+    background-color: black;
+    width: 100vw;
+    height: 20vh;
+    border-top: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+footer .logo {
+    display: block;
+    margin: 0 5%;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+footer h1 {
+    color: #00b3b3;
+    font-family: Orbitron;
+    font-size: 40px;
+    margin-right: 5%;
+}
+
+footer .navlink-bar {
+    display: flex;
+    width: 20%;
+}
+
+footer .navlink {
+    border: solid 1px gray;
+    border-radius: 8px;
+    padding: 3%;
+    margin-right: 8%;
+}
+
+footer .navlink a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: #00b3b3;
+}
+
+.sm-icons {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm-icons a {
+    color: white;
+    font-size: 35px;
+}
